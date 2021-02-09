@@ -258,16 +258,19 @@ body {
   border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 2px;
+  background-image: none;
 
   transition: background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1),
-    border-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+    border-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1),
+    background-image var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-input:checked + .checkbox-icon {
   background-color: var(--secondary-color);
   background-image: url('../images/sprite-svg/icon-check.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-origin: border-box;
-  background-size: contain;
   border-color: transparent;
 }
 
