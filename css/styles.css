@@ -122,6 +122,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   fill: #000000;
+
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form {
@@ -161,12 +163,28 @@ body {
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 42px;
+
+  transition: border-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-icon {
   position: absolute;
   left: 12px;
   bottom: 11px;
+
+  transition: fill var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:hover,
+.modal-input:focus {
+  border-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.modal-input:hover + .modal-form-icon,
+.modal-input:focus + .modal-form-icon {
+  fill: var(--secondary-color);
+  cursor: pointer;
 }
 
 .modal-textarea {
@@ -178,6 +196,8 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   overflow: scroll;
+
+  transition: border-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea::placeholder {
@@ -186,6 +206,19 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+
+  transition: color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:hover,
+.modal-textarea:focus {
+  border-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.modal-textarea:hover::placeholder,
+.modal-textarea:focus::placeholder {
+  color: var(--secondary-color);
 }
 
 .conteiner-checkbox {
@@ -225,6 +258,9 @@ body {
   border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 2px;
+
+  transition: background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1),
+    border-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-input:checked + .checkbox-icon {
@@ -233,6 +269,10 @@ body {
   background-origin: border-box;
   background-size: contain;
   border-color: transparent;
+}
+
+.checkbox-link {
+  color: var(--secondary-color);
 }
 
 .submit-btn {
@@ -251,6 +291,14 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--light-icon-color);
+
+  transition: background-color var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #188ce8;
+  cursor: pointer;
 }
 
 /* ============= end modal window =============*/
