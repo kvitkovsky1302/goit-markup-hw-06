@@ -181,15 +181,13 @@ body {
   cursor: pointer;
 }
 
-.modal-form-container:hover .modal-form-icon,
-.modal-form-container:focus .modal-form-icon {
+.modal-input:hover + .modal-form-icon,
+.modal-input:focus + .modal-form-icon {
   fill: var(--secondary-color);
   cursor: pointer;
 }
 
-.modal-form-icon:hover + .modal-input,
-.modal-form-icon:focus + .modal-input {
-  border-color: var(--secondary-color);
+.modal-form-icon:hover {
   fill: var(--secondary-color);
   cursor: pointer;
 }
@@ -198,7 +196,7 @@ body {
   padding: 12px 16px;
   margin-bottom: 20px;
   resize: none;
-  max-height: 120px;
+  height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
