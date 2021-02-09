@@ -181,9 +181,15 @@ body {
   cursor: pointer;
 }
 
-.modal-input:hover + .modal-form-icon,
-.modal-input:focus + .modal-form-icon {
+.modal-form-container:hover .modal-form-icon,
+.modal-form-container:focus .modal-form-icon {
   fill: var(--secondary-color);
+  cursor: pointer;
+}
+
+.modal-form-icon:hover + .modal-input,
+.modal-form-icon:focus + .modal-input {
+  border-color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -265,6 +271,7 @@ body {
     background-image var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.checkbox-label:focus-within .checkbox-icon,
 .checkbox-input:checked + .checkbox-icon {
   background-color: var(--secondary-color);
   background-image: url('../images/sprite-svg/icon-check.svg');
@@ -512,14 +519,6 @@ body {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-  /* position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden; */
 }
 
 .info-list {
