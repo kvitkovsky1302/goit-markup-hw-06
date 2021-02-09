@@ -111,6 +111,11 @@ body {
   cursor: pointer;
 }
 
+.modal-close:hover .modal-icon,
+.modal-close:focus .modal-icon {
+  fill: var(--secondary-color);
+}
+
 .modal-icon {
   position: absolute;
   top: 50%;
