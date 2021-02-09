@@ -190,6 +190,7 @@ body {
 .modal-form-icon:hover + .modal-input,
 .modal-form-icon:focus + .modal-input {
   border-color: var(--secondary-color);
+  fill: var(--secondary-color);
   cursor: pointer;
 }
 
