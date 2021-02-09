@@ -244,6 +244,19 @@ body {
   color: var(--primery-text-color);
 }
 
+.checkbox-label:focus-within .checkbox-input:checked {
+  background-color: var(--secondary-color);
+  background-image: url('../images/sprite-svg/icon-check.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-origin: border-box;
+  border-color: transparent;
+}
+
+.checkbox-label:focus-within .checkbox-icon {
+  border: 2px solid var(--secondary-color);
+}
+
 .checkbox-input {
   position: absolute;
   width: 1px;
@@ -270,7 +283,6 @@ body {
     background-image var(--time-hover) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-label:focus-within .checkbox-icon,
 .checkbox-input:checked + .checkbox-icon {
   background-color: var(--secondary-color);
   background-image: url('../images/sprite-svg/icon-check.svg');
